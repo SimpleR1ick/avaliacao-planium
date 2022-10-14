@@ -1,0 +1,14 @@
+{
+    "plano": "reg1",
+    "quantidade": 2,
+    "beneficiarios": [
+        {
+            "nome": "Luiza",
+            "idade": "17"
+        },
+        {
+            "nome": "Rick",
+            "idade": "18"
+        }
+    ]
+}

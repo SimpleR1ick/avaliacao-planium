@@ -1,0 +1,3 @@
+echo '<pre>';
+        print_r($planos);
+        echo '</pre>'; exit;

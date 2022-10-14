@@ -9,6 +9,9 @@ $obRouter = new Router(URL);
 // INCLUI AS ROTAS DO API
 include __DIR__.'/routes/api.php';
 
+// INCLUI AS ROTAS DO API
+include __DIR__.'/routes/pages.php';
+
 // IMPRIME O RESPONSE DA ROTA
 $obRouter->run()
          ->sendResponse();

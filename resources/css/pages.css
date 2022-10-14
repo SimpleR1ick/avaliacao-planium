@@ -1,0 +1,9 @@
+.custom-header {
+    border-radius: 30px;
+}
+
+.custom-header .btn {
+    background-color: #333;
+    border: 1px solid #222;
+    color: #fff;
+}

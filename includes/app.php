@@ -2,6 +2,7 @@
 require __DIR__.'/../vendor/autoload.php';
 
 use App\Utils\Environment;
+use App\Utils\View;
 use App\Http\Middleware\Queue as MiddlewareQueue;
 
 // CARREGA VARIAVEIS DE AMBIENTE
@@ -9,6 +10,11 @@ Environment::load(__DIR__.'/../');
 
 // DEFINE A CONSTANTE DE URL DO PROJETO
 define('URL', getenv('URL'));
+
+// DEFINE O VALOR PADRÃO DAS VARIAVEIS
+View::init([
+    'URL' => URL
+]);
 
 // DEFINE O MAPEAMENTO DE MIDDLEWARES
 MiddlewareQueue::setMap([

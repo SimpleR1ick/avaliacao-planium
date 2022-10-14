@@ -22,14 +22,14 @@ class DadosProposta extends Api {
             throw new Exception("Os campos 'plano' e 'beneficiarios' são obrigatorios", 400);
         }
         // BUSCA OS PLANOS
-        $planos = EntityPlanos::getRegistrosPlanos();
+        $planos = EntityPlanos::getPlansRegisters();
 
         // POST VARS
         $plano   = $postVars['plano'];
         $pessoas = $postVars['beneficiarios'];
 
         // VERIFICA SE O PLANO EXISTE
-        if (!EntityPlanos::getPlanoExiste($planos, $plano)) {
+        if (!EntityPlanos::getIfPlanExists($planos, $plano)) {
             throw new Exception("O plano ".$plano." não foi encontrado", 404);
         } 
         // NOVA INSTANCIA DE DADDOS PARA PROPOSTA

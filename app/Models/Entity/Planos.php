@@ -2,9 +2,28 @@
 
 namespace App\Models\Entity;
 
+use App\Utils\Json;
 
-class Planos extends Json {
+class Plano {
   
+    /**
+     * Nome do registro do plano
+     * @var string
+     */
+    public $registro;
+
+    /**
+     * Nome do plano
+     * @var string
+     */
+    public $nome;
+
+    /**
+     * Codigo do plano
+     * @var integer
+     */
+    public $codigo;
+
     /**
      * Methodo responsavel por retornar os registros dos planos
      * @return array
@@ -14,7 +33,7 @@ class Planos extends Json {
         $registros = [];
 
         // OBTEM TODOS OS PLANOS
-        $planos = parent::getCotentent('plans');
+        $planos = Json::getCotentent('plans');
 
         // PERCORRE OS PLANOS E OBTEM OS REGISTROS DE CADA
         foreach ($planos as $plano) {

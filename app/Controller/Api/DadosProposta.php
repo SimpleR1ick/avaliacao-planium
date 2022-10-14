@@ -3,7 +3,7 @@
 namespace App\Controller\Api;
 
 use Exception;
-use App\Models\Entity\Planos as EntityPlanos;
+use App\Models\Entity\Plano as EntityPlano;
 use App\Models\Entity\DadosProposta as EntityDadosProposta;
 
 
@@ -22,14 +22,14 @@ class DadosProposta extends Api {
             throw new Exception("Os campos 'plano' e 'beneficiarios' são obrigatorios", 400);
         }
         // BUSCA OS PLANOS
-        $planos = EntityPlanos::getPlansRegisters();
+        $planos = EntityPlano::getPlansRegisters();
 
         // POST VARS
         $plano   = $postVars['plano'];
         $pessoas = $postVars['beneficiarios'];
 
         // VERIFICA SE O PLANO EXISTE
-        if (!EntityPlanos::getIfPlanExists($planos, $plano)) {
+        if (!EntityPlano::getIfPlanExists($planos, $plano)) {
             throw new Exception("O plano ".$plano." não foi encontrado", 404);
         } 
         // NOVA INSTANCIA DE DADDOS PARA PROPOSTA

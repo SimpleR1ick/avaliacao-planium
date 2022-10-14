@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Entity;
+namespace App\Utils;
 use Exception;
 
 class Json {

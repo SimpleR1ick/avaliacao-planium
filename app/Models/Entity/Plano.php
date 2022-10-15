@@ -33,7 +33,7 @@ class Plano {
         $registros = [];
 
         // OBTEM TODOS OS PLANOS
-        $planos = Json::getCotentent('plans');
+        $planos = Json::getContent('plans');
 
         // PERCORRE OS PLANOS E OBTEM OS REGISTROS DE CADA
         foreach ($planos as $plano) {

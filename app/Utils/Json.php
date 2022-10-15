@@ -18,7 +18,7 @@ class Json {
      * @param string $name
      * @return array
      */
-    public static function getCotentent($name) {
+    public static function getContent($name) {
         // BUSCA O CAMINHO DO ARQUIVO
         $path = self::getFilePath($name);
 

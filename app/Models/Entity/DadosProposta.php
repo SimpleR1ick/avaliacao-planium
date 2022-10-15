@@ -8,7 +8,7 @@ class DadosProposta {
      * Codigo do plano
      * @var string
      */
-    public $plano;
+    public $registro;
 
     /**
      * Registro do plano
@@ -31,7 +31,7 @@ class DadosProposta {
 
         // CONTEUDO DO ARQUIVO
         $content = [
-            'plano' => $this->plano,
+            'registro' => $this->registro,
             'quantidade' => $this->quantidade,
             'beneficiarios' => $this->beneficiarios
         ];

@@ -2,5 +2,18 @@
     <div class="row">
         <h1>Home {{name}}</h1>
     </div>
+
+    <div class="row">
+        <form method="post">
+            <div class="form-group">
+                <input id="qtdpessoas" onchange="alterarQtdPessoas()" type="number" min="1" step="1" required>
+                <div id="forms"></div>
+            </div>
+
+            <div class="form-group mt-3">
+                <button class="btn btn-success" type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
 </main>
 

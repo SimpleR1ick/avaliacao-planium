@@ -4,7 +4,7 @@ Ainda não consegui estabelecer a interface para o consumo da api, mas realizei 
 
 Para consultar os dados da api, realize um GET via HTTP para: http://localhost/avaliacao-planium/api/v1
 
-1 - Realizar um POST via HTTP para o seguinte endereço: http://localhost/avaliacao-planium/api/v1/dados_proposta, entrada via raw no seguinte formato:
+1 - Realizar um POST via HTTP para o seguinte endereço: http://localhost/avaliacao-planium/api/v1/dados_proposta, entrada via raw no seguinte formato do exemplo abaixo:
 ```json
 {
     "plano": "reg1",

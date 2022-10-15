@@ -24,8 +24,4 @@ class Home extends Page{
         // RETORNA A VIEW DA PAGINA
         return parent::getPage('Home', $content);
     }
-
-    public function setBeneficiarios($request) {
-
-    }
 }

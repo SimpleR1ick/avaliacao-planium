@@ -21,12 +21,12 @@ class DadosProposta extends Api {
         if (!isset($postVars['plano']) and !isset($postVars['beneficiarios'])) {
             throw new Exception("Os campos 'plano' e 'beneficiarios' são obrigatorios", 400);
         }
-        // BUSCA OS PLANOS
-        $planos = EntityPlano::getPlansRegisters();
-
         // POST VARS
         $plano   = $postVars['plano'];
         $pessoas = $postVars['beneficiarios'];
+
+        // BUSCA OS PLANOS
+        $planos = EntityPlano::getPlansRegisters();
 
         // VERIFICA SE O PLANO EXISTE
         if (!EntityPlano::getIfPlanExists($planos, $plano)) {

@@ -2,8 +2,7 @@
 
 Ainda não consegui estabelecer a interface para o consumo da api, mas realizei todos os testes utilizando um aplicativo de API, como no meu caso o Postman
 
-1 - Realizar um post via HTTP para o seguinte endereço: http://localhost/avaliacao-planium/api/v1/dados_proposta
-    Entrada via raw no seguinte formato:
+1 - Realizar um post via HTTP para o seguinte endereço: http://localhost/avaliacao-planium/api/v1/dados_proposta, entrada via raw no seguinte formato:
 ```json
 {
     "plano": "reg1",

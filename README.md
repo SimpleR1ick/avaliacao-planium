@@ -4,6 +4,7 @@ Ainda não consegui estabelecer a interface para o consumo da api, mas realizei 
 
 1 - Realizar um post via HTTP para o seguinte endereço: http://localhost/avaliacao-planium/api/v1/dados_proposta
     Entrada via raw no seguinte formato:
+```json
 {
     "plano": "reg1",
     "beneficiarios": [
@@ -17,9 +18,9 @@ Ainda não consegui estabelecer a interface para o consumo da api, mas realizei 
         }
     ]
 }
-
+```
 2 - Obtera a seguinte saida
-
+```json
 {
     "registro": "reg1",
     "quantidade": 2,
@@ -37,3 +38,4 @@ Ainda não consegui estabelecer a interface para o consumo da api, mas realizei 
     ],
     "total": 22
 }
+```

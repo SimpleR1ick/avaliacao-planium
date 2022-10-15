@@ -102,5 +102,7 @@ class DadosProposta extends Api {
         
         // ARAMAZENA OS DADOS DA PROPOSTA
         Json::setContent('proposta', $proposta);
+
+        return $proposta;
     }
 }

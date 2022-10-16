@@ -1,34 +1,35 @@
-<div class="row">
-    <h1>Home</h1>
-    <p>Leia o READ-ME do repositorio por gentileza 🙏</p>
+<main>
+    <div class="row">
+        <h1>Home</h1>
+        <p>Leia o READ-ME do repositorio por gentileza 🙏</p>
 
-    {{status}}
-</div>
+        {{status}}
+    </div>
 
-<div class="row">
-    <form method="post">
-        <div class="mb-3">
-            <label class="form-label" for="plano">Plano</label>
-            <select class="form-select" name="plano" aria-label="Default select example">
-                <option selected>Seleciona um plano</option>
-                <option value="reg1">Bitix Customer Plano 1</option>
-                <option value="reg2">Bitix Customer Plano 2</option>
-                <option value="reg3">Bitix Customer Plano 3</option>
-                <option value="reg4">Bitix Customer Plano 4</option>
-                <option value="reg5">Bitix Customer Plano 5</option>
-                <option value="reg6">Bitix Customer Plano 6</option>
-            </select>
-        </div>
+    <div class="row">
+        <form method="post">
+            <div class="mb-3">
+                <label class="form-label" for="plano">Plano</label>
+                <select class="form-select" name="plano" aria-label="Default select example">
+                    <option selected>Seleciona um plano</option>
+                    <option value="reg1">Bitix Customer Plano 1</option>
+                    <option value="reg2">Bitix Customer Plano 2</option>
+                    <option value="reg3">Bitix Customer Plano 3</option>
+                    <option value="reg4">Bitix Customer Plano 4</option>
+                    <option value="reg5">Bitix Customer Plano 5</option>
+                    <option value="reg6">Bitix Customer Plano 6</option>
+                </select>
+            </div>
 
-        <div class="mb-3">
-            <label class="form-label" for="qtdpessoas">Beneficiarios</label>
-            <input class="form-control" id="qtdpessoas" onchange="alterarQtdPessoas()" type="number" min="1" step="1" required>            
-        </div>
+            <div class="mb-3">
+                <label class="form-label" for="qtdpessoas">Beneficiarios</label>
+                <input class="form-control" id="qtdpessoas" onchange="alterarQtdPessoas()" type="number" min="1" step="1" required>            
+            </div>
 
-        <div class="mb-3" id="forms"></div>
+            <div class="mb-3" id="forms"></div>
 
-        <button class="btn btn-outline-primary" type="submit">Enviar</button>
-    </form>
-</div>
-
+            <button class="btn btn-outline-primary" type="submit">Enviar</button>
+        </form>
+    </div>
+</main>
 

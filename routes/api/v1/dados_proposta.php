@@ -9,6 +9,6 @@ $obRouter->post('/api/v1/dados_proposta', [
         'api'
     ],
     function($request) {
-        return new Response(200, Api\DadosProposta::setNewDadosProposta($request), 'application/json');
+        return new Response(200, Api\DadosProposta::setDadosProposta($request), 'application/json');
     }
 ]);

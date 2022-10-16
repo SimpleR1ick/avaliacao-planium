@@ -11,36 +11,54 @@ function alterarQtdPessoas(){
 }
 
 function criarForms(i){
-    // Criando nova div
-    let novaDiv = document.createElement('div');
+
     let div = document.querySelector('#forms');
+
+    let input_div = document.createElement('div');
+    input_div.className = 'row mb-3'; 
+
+    // Criando nova div
+    let nome_div = document.createElement('div');
+    nome_div.className = 'col-sm-6';
+
+    let idade_div = document.createElement('div');
+    idade_div.className = 'col-sm-6';
 
     // Criando input nome
     const nome = document.createElement('input');
+    nome.className = 'form-control';
+    nome.setAttribute('required', '');
     nome.name = `nome${i}`;
     nome.type = 'text';
-    
+
     // Criando label nome
-    const labelNome = document.createElement('label');
-    labelNome.setAttribute('for', nome.id);
-    labelNome.innerHTML = 'Nome: ';
+    const label_nome = document.createElement('label');
+    label_nome.className = 'form-label';
+    label_nome.setAttribute('for', nome.id);
+    label_nome.innerHTML = 'Nome';
 
     // Criando input idade
     const idade = document.createElement('input');
+    idade.className = 'form-control';
+    idade.setAttribute('required', '');
     idade.name = `idade${i}`;
     idade.type = 'number';
     idade.min = 0;
 
     // Criando label idade
-    const labelIdade = document.createElement('label');
-    labelIdade.setAttribute('for', idade.id);
-    labelIdade.innerHTML = 'Idade: ';
+    const label_idade = document.createElement('label');
+    label_idade.className = 'form-label';
+    label_idade.setAttribute('for', idade.id);
+    label_idade.innerHTML = 'Idade';
 
-    // Colocando os inputs na div
-    novaDiv.appendChild(labelNome)
-    novaDiv.appendChild(nome);
-    novaDiv.appendChild(labelIdade)
-    novaDiv.appendChild(idade);
+    // Colocando os 
+    nome_div.appendChild(label_nome)
+    nome_div.appendChild(nome);
+    idade_div.appendChild(label_idade)
+    idade_div.appendChild(idade);
 
-    div.appendChild(novaDiv);
+    input_div.appendChild(nome_div);
+    input_div.appendChild(idade_div);
+
+    div.appendChild(input_div);
 }

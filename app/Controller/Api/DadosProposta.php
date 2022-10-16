@@ -13,7 +13,7 @@ class DadosProposta extends Api {
      * Methodo Responsavel por cadastrar os dados de uma proposta de plano
      * @param \App\Http\Request $request
      */
-    public static function setNewDadosProposta($request) {
+    public static function setDadosProposta($request) {
         // OBTENDO AS VARIAVEIS DO POST
         $postVars = $request->getPostVars();
 

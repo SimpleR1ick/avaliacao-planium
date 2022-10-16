@@ -3,14 +3,14 @@
     "quantidade": 2,
     "beneficiarios": [
         {
-            "nome": "Henrique",
-            "idade": "18",
-            "preco": 12
-        },
-        {
             "nome": "Luiza",
             "idade": "17",
             "preco": 10
+        },
+        {
+            "nome": "Rick",
+            "idade": "18",
+            "preco": 12
         }
     ],
     "total": 22

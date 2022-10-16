@@ -3,8 +3,8 @@
 namespace App\Controller\Pages;
 
 use App\Utils\Json;
-use \App\Utils\View;
-use \App\Models\Entity\Organization;
+use App\Utils\View;
+use App\Models\Entity\Organization;
 use App\Models\Entity\Proposta as EntityProposta;
 use App\Models\Entity\DadosProposta as EntityDadosProposta;
 use Exception;
@@ -16,13 +16,14 @@ class Home extends Page{
      * 
      * @return string 
      */
-    public static function getHome(){
+    public static function getHome($request){
 
         $obOrganization = new Organization;
 
         // VIEW DA HOME
         $content =  View::render('pages/home',[
-            'name' => $obOrganization->name
+            'name' => $obOrganization->name,
+            'status' => self::getStatus($request)
         ]);
 
         // RETORNA A VIEW DA PAGINA
@@ -65,5 +66,32 @@ class Home extends Page{
         Json::setContent('beneficiarios', $obDadosProposta);
 
         EntityProposta::setProposta($obDadosProposta);
+
+        // REDIRECIONA O USUARIO
+        $request->getRouter()->redirect('/?status=created');
+    }
+
+    /**
+     * Methodo responsavel por retornar a menagem de status
+     * @param \App\Http\Request
+     * @return string
+     */
+    private static function getStatus($request) {
+        // DECLARAÇÃO DE VARIAVEL
+        $msg = '';
+
+        // QUERY PARAMS
+        $queryParams = $request->getQueryParams();
+
+        if (!isset($queryParams['status'])) return $msg;
+
+        // MENSAGENS DE STATUS
+        switch ($queryParams['status']) {
+            case 'created':
+                $msg = 'Proposta criada com sucesso!';
+        }
+        
+        // EXIBE A MENSAGEM DE SUCESSO
+        return Alert::getSucess($msg);        
     }
 }

@@ -1,6 +1,6 @@
 # avaliacao-planium
 
-Ainda não consegui estabelecer a interface para o consumo da api, mas realizei todos os testes utilizando um aplicativo de API, como no meu caso o Postman
+Implementado uma API e consumo da propria pela interface da pagina
 
 ### Desemvolvimento
 

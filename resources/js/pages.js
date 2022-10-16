@@ -5,7 +5,7 @@ function alterarQtdPessoas(){
 
     var pessoas = document.getElementById('qtdpessoas').value;
 
-    for (let i = 0; i < pessoas; i++) {
+    for (let i = 1; i <= pessoas; i++) {
         criarForms(i);
     }
 }

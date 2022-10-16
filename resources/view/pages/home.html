@@ -5,5 +5,16 @@
 
     <p>Leia o READ-ME do repositorio por gentileza 🙏</p>
 
+    <form method="post">
+        <label for="plano">Plano:</label>
+        <input name="plano" type="text" required>
+    
+        <label for="qtdpessoas">Beneficiarios</label>
+        <input id="qtdpessoas" onchange="alterarQtdPessoas()" type="number" min="1" step="1">
+        <div id="forms"></div>
+
+        <button class="btn btn-primary" type="submit">Enviar</button>
+    </form>
+
 </main>
 

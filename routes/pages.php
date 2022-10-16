@@ -10,6 +10,13 @@ $obRouter->get('/', [
     }
 ]);
 
+// ROTA HOME
+$obRouter->post('/', [
+    function($request) {
+        return new Response(200, Pages\Home::setDadosProposta($request));
+    }
+]);
+
 // ROTA SOBRE
 $obRouter->get('/sobre', [
     function() {
